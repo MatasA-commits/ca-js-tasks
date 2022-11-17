@@ -482,42 +482,58 @@ console.group('FOR');
   console.groupEnd();
   console.groupCollapsed('24. Atspausdinkite <numbers> masyvo elementus nuo paskutinio iki antro');
   {
-
+    for(let i = numbers.length - 1; i >= 1; i += -1){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('25. Atspausdinkite <numbers> masyvo elementus nuo prieš paskutinio iki trečio');
   {
-
+    for(let i = numbers.length - 2; i >= 2; i += -1){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('26. Atspausdinkite <numbers> masyvo kas antrą elementą iš kairės į dešinę');
   {
-
+    for(let i = 0; i <= numbers.length - 1; i += 2){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('27. Atspausdinkite <numbers> masyvo kas trečią elementą iš kairės į dešinę');
   {
-
+    for(let i = 0; i <= numbers.length - 1; i += 3){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('28. Atspausdinkite <numbers> masyvo kas antrą elementą iš kairės į dešinę, pradedant trečiu');
   {
-
+    for(let i = 2; i <= numbers.length - 1; i += 2){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('29. Atspausdinkite <numbers> masyvo kas antrą elementą iš dešinės');
   {
-
+    for(let i=numbers.length-1; i >= 0; i += -2){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('30. Atspausdinkite <numbers> masyvo kas trečią elementą iš dešinės');
   {
-
+    for(let i = numbers.length - 1; i >= 0; i += -3){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
   console.groupCollapsed('31. Atspausdinkite <numbers> masyvo kas antrą elementą iš dešinės, pradedant prieš prieš paskutiniu');
   {
-
+    for(let i = numbers.length-2; i >= 0; i += -2){
+      console.log(numbers[i]);
+    }
   }
   console.groupEnd();
 }
