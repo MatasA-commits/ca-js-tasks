@@ -1,5 +1,5 @@
 # Mato Aleliūno JavaScript namų darbai
-Mano asmeninių namų darbų repozitorija.
+JavaScript namų darbų repozitorija.
 ```bash
-To watch files in browser console use .html file in every folder
+To watch files in browser console, use .html file in every folder.
 ```
