@@ -3,7 +3,8 @@ console.groupCollapsed('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
   drinks = [
     {name: "lemonade", price: 50},
     {name: "lime", price: 10}
-  ]
+  ];
+
   function sortDrinkByPrice(drinks) {
    return drinks.sort((a, b) => (a.price > b.price) ? 1 : -1);
   }
@@ -150,6 +151,7 @@ console.groupCollapsed('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
       return sum;
     }
   }
+  
   console.log(calculateLosses(stolenItems));
 }
 console.groupEnd();
