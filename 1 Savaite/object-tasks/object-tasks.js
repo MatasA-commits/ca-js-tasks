@@ -151,7 +151,7 @@ console.groupCollapsed('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
       return sum;
     }
   }
-  
+
   console.log(calculateLosses(stolenItems));
 }
 console.groupEnd();
