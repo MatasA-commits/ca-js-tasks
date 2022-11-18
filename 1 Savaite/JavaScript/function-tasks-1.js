@@ -1,4 +1,4 @@
-console.groupCollapsed('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.');
+console.group('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.');
 {
   // funkcijos deklaracija
   function getArrayFirstElement(array){
@@ -20,7 +20,7 @@ console.groupCollapsed('1. Parašykite funkciją, kuri grąžina pirmą masyvo e
 }
 console.groupEnd();
 
-console.groupCollapsed('2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.');
+console.group('2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.');
 {
   function fetchArrayFirstElement(array){
     const fetchfirstElement = array.splice(0, 1);
@@ -44,7 +44,7 @@ console.groupCollapsed('2. Parašykite funkciją, kuri pašalina pirmą masyvo e
 }
 console.groupEnd();
 
-console.groupCollapsed('3. Parašykite funkciją, kuri grąžina paskutinį masyvo elementą.');
+console.group('3. Parašykite funkciją, kuri grąžina paskutinį masyvo elementą.');
 {
   // funkcijos deklaracija
   function getArrayLastElement(array){
@@ -66,7 +66,7 @@ console.groupCollapsed('3. Parašykite funkciją, kuri grąžina paskutinį masy
 }
 console.groupEnd();
 
-console.groupCollapsed('4. Parašykite funkciją, kuri pašalina paskutinį masyvo elementą ir jį grąžina.');
+console.group('4. Parašykite funkciją, kuri pašalina paskutinį masyvo elementą ir jį grąžina.');
 {
   function fetchArrayLastElement(array){
     const lastElement = array.length-1;
@@ -91,7 +91,7 @@ console.groupCollapsed('4. Parašykite funkciją, kuri pašalina paskutinį masy
 }
 console.groupEnd();
 
-console.groupCollapsed('5. Parašykite funkciją, kuri grąžina elementų kiekį masyve');
+console.group('5. Parašykite funkciją, kuri grąžina elementų kiekį masyve');
 {
   function getArrayLength(array){
     return array.length;
@@ -111,7 +111,7 @@ console.groupCollapsed('5. Parašykite funkciją, kuri grąžina elementų kiek�
 }
 console.groupEnd();
 
-console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą');
+console.group('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą');
 {
   function getArrayLastItemIndex(array){
     return array.length - 1;
@@ -131,7 +131,7 @@ console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio ma
 }
 console.groupEnd();
 
-console.groupCollapsed('7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus eilutėmis');
+console.group('7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus eilutėmis');
 {
   function getArrayIndexInRow(array){
     for(let i = 0; i < array.length; i += 1){
@@ -150,7 +150,7 @@ console.groupCollapsed('7. Parašykite funkciją, kuri atspausdina kiekvieno mas
 }
 console.groupEnd();
 
-console.groupCollapsed('8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes eilutėmis');
+console.group('8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes eilutėmis');
 {
   function getArrayValuesInRow(array){
     for(let i = 0; i < array.length; i += 1){
@@ -169,7 +169,7 @@ console.groupCollapsed('8. Parašykite funkciją, kuri atspausdina kiekvieno mas
 }
 console.groupEnd();
 
-console.groupCollapsed('9. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras eilutėmis, tokiu formatu:  ');
+console.group('9. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras eilutėmis, tokiu formatu:  ');
 // [0] => reikšmė
 // [1] => reikšmė
 // [2] => reikšmė
@@ -191,7 +191,7 @@ console.groupCollapsed('9. Parašykite funkciją, kuri atspausdina kiekvieno mas
 }
 console.groupEnd();
 
-console.groupCollapsed('10. Parašykite funkciją, kuri atspausdina masyvo elementus atbuline tvarka eilutėmis, iš galo.');
+console.group('10. Parašykite funkciją, kuri atspausdina masyvo elementus atbuline tvarka eilutėmis, iš galo.');
 {
   function getArrayValuesInRowReverse(array){
     for(let i = array.length - 1; i >= 0; i += -1){
@@ -210,7 +210,7 @@ console.groupCollapsed('10. Parašykite funkciją, kuri atspausdina masyvo eleme
 }
 console.groupEnd();
 
-console.groupCollapsed('11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ...');
+console.group('11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ...');
 {
   // funkcijos deklaracija
   function getIndexesInLine(array){
@@ -233,7 +233,7 @@ console.groupCollapsed('11. Parašykite funkciją, kuri atspausdina kiekvieno ma
 }
 console.groupEnd();
 
-console.groupCollapsed('12. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes vienoje eilutėje: -111 2 -9 48');
+console.group('12. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes vienoje eilutėje: -111 2 -9 48');
 {
   // funkcijos deklaracija
   function getValuesInLine(array){
@@ -256,7 +256,7 @@ console.groupCollapsed('12. Parašykite funkciją, kuri atspausdina kiekvieno ma
 }
 console.groupEnd();
 
-console.groupCollapsed('13. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras vienoje eilutėje, tokiu formatu:');
+console.group('13. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indekso ir reikšmių poras vienoje eilutėje, tokiu formatu:');
 //  [0]=>17 [1]=>8 [2]=>88 ..
 {
   // funkcijos deklaracija
