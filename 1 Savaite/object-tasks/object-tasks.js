@@ -72,7 +72,7 @@ console.groupCollapsed('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
 {
   function maximumScore(tileHand) {
     let sum = 0;
-    for (let i = 0; i <= 6; i += 1){
+    for (let i = 0; i < tileHand.length; i += 1){
       sum += tileHand[i].score;
     }
     return sum;
@@ -105,12 +105,32 @@ console.groupEnd();
 
 console.groupCollapsed('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
 {
-  function toArray(obj){
+   function toArray(obj){
     const entries = Object.entries(obj);
     return entries;
   }
 
-  console.log(toArray({}));
+  const arr1 = toArray({a: 1, b:2, c:6});
+  const arr2 = toArray({shrimp: 1, tots:2, lydeka:6});
+
+  console.log(arr1);
+  console.log(arr2); 
+  //pvz
+  /* function toArray(obj){
+    const result = [];
+    let i = 0;
+    for (const key in obj) {
+      result[i] = [key, obj[key]];
+      i += 1
+    }
+    return result;
+  }
+
+  const arr1 = toArray({a: 1, b:2, c:6});
+  const arr2 = toArray({shrimp: 1, tots:2, lydeka:6});
+
+  console.log(arr1);
+  console.log(arr2); */
 }
 console.groupEnd();
 
