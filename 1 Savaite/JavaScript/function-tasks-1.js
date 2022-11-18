@@ -1,3 +1,8 @@
+//bandomieji kintamieji
+const array1 = [2, 4, 10, 14, 10, 20, 30];
+const array2 = ['hello', 'how', 'are', 'you'];
+const array3 = ['%', '$', '@'];
+
 console.group('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.');
 {
   // funkcijos deklaracija
@@ -5,10 +10,7 @@ console.group('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.
     const firstElement = array[0];
     return firstElement;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = getArrayFirstElement(array1);
   const callArray2 = getArrayFirstElement(array2);
@@ -26,10 +28,7 @@ console.group('2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą 
     const fetchfirstElement = array.splice(0, 1);
     return fetchfirstElement;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = fetchArrayFirstElement(array1);
   const callArray2 = fetchArrayFirstElement(array2);
@@ -51,10 +50,7 @@ console.group('3. Parašykite funkciją, kuri grąžina paskutinį masyvo elemen
     const firstElement = array[array.length-1];
     return firstElement;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = getArrayLastElement(array1);
   const callArray2 = getArrayLastElement(array2);
@@ -73,10 +69,7 @@ console.group('4. Parašykite funkciją, kuri pašalina paskutinį masyvo elemen
     const fetchfirstElement = array.splice(lastElement, lastElement);
     return fetchfirstElement;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = fetchArrayLastElement(array1);
   const callArray2 = fetchArrayLastElement(array2);
@@ -96,10 +89,7 @@ console.group('5. Parašykite funkciją, kuri grąžina elementų kiekį masyve'
   function getArrayLength(array){
     return array.length;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = getArrayLength(array1);
   const callArray2 = getArrayLength(array2);
@@ -116,10 +106,7 @@ console.group('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elem
   function getArrayLastItemIndex(array){
     return array.length - 1;
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai ir saugojimai į rezultatus
   const callArray1 = getArrayLastItemIndex(array1);
   const callArray2 = getArrayLastItemIndex(array2);
@@ -158,10 +145,7 @@ console.group('8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo eleme
     }
     console.log('###################################') //Eilute lengvam skirtingu kvietimu atspauzdinimui
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getArrayValuesInRow(array1);
   getArrayValuesInRow(array2);
@@ -180,10 +164,7 @@ console.group('9. Parašykite funkciją, kuri atspausdina kiekvieno masyvo eleme
     }
     console.log('###################################') //Eilute lengvam skirtingu kvietimu atspauzdinimui
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getArrayIndexValuePairsInRow(array1);
   getArrayIndexValuePairsInRow(array2);
@@ -199,10 +180,7 @@ console.group('10. Parašykite funkciją, kuri atspausdina masyvo elementus atbu
     }
     console.log('###################################') //Eilute lengvam skirtingu kvietimu atspauzdinimui
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getArrayValuesInRowReverse(array1);
   getArrayValuesInRowReverse(array2);
@@ -222,10 +200,7 @@ console.group('11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elem
     }
     console.log(indexes);
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getIndexesInLine(array1);
   getIndexesInLine(array2);
@@ -245,10 +220,7 @@ console.group('12. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elem
     }
     console.log(values);
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getValuesInLine(array1);
   getValuesInLine(array2);
@@ -269,10 +241,7 @@ console.group('13. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elem
     }
     console.log(pairs);
   }
-  // bandomieji kintamieji
-  const array1 = [2, 4, 10, 14, 10, 20, 30];
-  const array2 = ['hello', 'how', 'are', 'you'];
-  const array3 = ['%', '$', '@'];
+
   // funkcijos iškvietimai
   getIndexValuePairsInLine(array1);
   getIndexValuePairsInLine(array2);
