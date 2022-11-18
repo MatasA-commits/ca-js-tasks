@@ -1,7 +1,8 @@
 //bandomieji kintamieji
+//uzduotyse kintamieji yra isimami is pradzios ir pabaigos todel pirmas ir paskutinis elementas veliau nebepasirodo
 const array1 = [2, 4, 10, 14, 10, 20, 30];
-const array2 = ['hello', 'how', 'are', 'you'];
-const array3 = ['%', '$', '@'];
+const array2 = ['hello', 'how', 'are', 'you', 'doing', 'today'];
+const array3 = ['%', '$', '@', '_', '+', '^', '#'];
 
 console.group('1. Parašykite funkciją, kuri grąžina pirmą masyvo elementą.');
 {
