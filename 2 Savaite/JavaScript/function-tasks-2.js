@@ -1,5 +1,5 @@
 // ----------------------Užduotys--------------------------
-const numbers = [1, 2, -2, 6, -5, 9, 1.02, 45, -69, 77, -12, 2, 8, -2, -4, 59, 7, -3];
+const numbers = [1, 2.3, -2.9, 6.5, -5.2, 9, 1.02, 45, -69, 77, -12, 2, 8, -2, -4, 59, 7, -3];
 
 console.group('1. Padauginti masyvo narius iš 2 ir išsaugoti naujame masyve');
 console.log('---');
@@ -203,21 +203,16 @@ console.group('11. Suapvalinti visas masyvo reikšmes iki sveikų skaičių ir i
 console.log('---');
 {
   function absArrElements(arr) {
-    const result = [];
-    let roundDown = 0;
-    let roundUp = 0;
+    let result = [];
     for(let i = 0; i < arr.length; i += 1){
-      if(arr[i] % 1 === 0){
-        result.push(arr[i]);
-      }else if(arr[i] % 1 < 0.5){
-        roundDown = arr[i] - (arr[i] % 1);
-        result.push(roundDown);
-      } else if(arr[i] % 1 >= 0.5){
-        roundUp = (arr[i] + 1) - (arr[i] % 1);
-        result.push(roundUp);
-      }
+    let remainder = arr[i] % 1;
+    let whole = arr[i] - remainder;
+    if(remainder <= -0.5) result.push(whole - 1);
+    else if(remainder >= 0.5) result.push(whole + 1) ;
+    else result.push(whole);
     }
     return result;
+    
   }
    console.log({
      numbers,
@@ -319,8 +314,8 @@ console.group('17. Sukurti funkciją, kuri ima masyvą ir grąžina didžiausią
 console.log('---');
 {
   function arrMax(arr) {
-    let max = 0;
-    for(let i = 0; i < arr.length; i += 1){
+    let max = arr[0];
+    for(let i = 1; i < arr.length; i += 1){
       arr[i] > max ? max = arr[i] : 0;
     }
     return max;
@@ -338,8 +333,8 @@ console.group('18. Sukurti funkciją, kuri ima masyvą ir grąžina mažiausią 
 console.log('---');
 {
   function arrMin(arr) {
-    let min = 0;
-    for(let i = 0; i < arr.length; i += 1){
+    let min = arr[0];
+    for(let i = 1; i < arr.length; i += 1){
       arr[i] < min ? min = arr[i] : 0;
     }
     return min;
