@@ -56,19 +56,31 @@ const people = [
 ];
 console.groupCollapsed('1. Atspausdinkite visus žmones eilutėmis');
 {
-  // ...sprendimas ir spausdinimas
+  function printPeopleInfo(people){
+    const peopleString = `${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`;
+    console.log(peopleString);
+  }
+  people.forEach(printPeopleInfo);
 }
 console.groupEnd();
 
 console.groupCollapsed('2. Atpausdinkite visus žmonių varus ir pavardes, atskirtus brūkšneliu');
 {
-  // ...sprendimas ir spausdinimas
+  function printNameSurname(people){
+    const nameSurnameString = `${people.name} - ${people.surname}`;
+    console.log(nameSurnameString);
+  }
+  people.forEach(printNameSurname);
 }
 console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
 {
-  // ...sprendimas ir spausdinimas
+  function printNameSurnameIsMarried(people){
+    const nameSurnameIsMarriedString = `${people.name} ${people.surname} is married: ${people.married}`;
+    console.log(nameSurnameIsMarriedString);
+  }
+  people.forEach(printNameSurnameIsMarried);
 }
 console.groupEnd();
 
@@ -86,25 +98,37 @@ console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinkite visus vyrus');
 {
-  // ...sprendimas ir spausdinimas
+  function printMales(people){
+    if(people.sex === 'male') console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  }
+  people.forEach(printMales);
 }
 console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinkite visas moteris');
 {
-  // ...sprendimas ir spausdinimas
+  function printFemales(people){
+    if(people.sex === 'female') console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  }
+  people.forEach(printFemales);
 }
 console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
 {
-  // ...sprendimas ir spausdinimas
+  function printIfHasCar(people){
+    if(people.hasCar === true) console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  }
+  people.forEach(printIfHasCar);
 }
 console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
 {
-  // ...sprendimas ir spausdinimas
+  function printMarried(people){
+    if(people.married === true) console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  }
+  people.forEach(printMarried);
 }
 console.groupEnd();
 
