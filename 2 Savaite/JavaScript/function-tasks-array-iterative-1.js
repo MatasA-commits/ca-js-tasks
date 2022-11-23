@@ -86,73 +86,144 @@ console.groupEnd();
 
 console.groupCollapsed('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
 {
-  // ...sprendimas ir spausdinimas
+  function getSexSalary(people){
+    return {
+    sex : people.sex,
+    income: people.income
+  }
+  }
+  const sexSalaryArray = people.map(getSexSalary);
+  console.table(sexSalaryArray);
+
 }
 console.groupEnd();
 
 console.groupCollapsed('5. Sukurtite masyvą su vardais, pavardėmis ir lytimi, pagal pradinį žmonių masyvą');
 {
-  // ...sprendimas ir spausdinimas
+  function getFullNameSex(people){
+    return {
+      name: people.name,
+      surname: people.surname,
+      sex: people.sex
+    }
+  }
+  const fullNameSexArray = people.map(getFullNameSex);
+  console.log(fullNameSexArray);
 }
 console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinkite visus vyrus');
 {
-  function printMales(people){
-    if(people.sex === 'male') console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  function isMale(people){
+    return people.sex === 'male';
   }
-  people.forEach(printMales);
+  console.log(people.filter(isMale))
 }
 console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinkite visas moteris');
 {
-  function printFemales(people){
-    if(people.sex === 'female') console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  function isFemale(people){
+    return people.sex === 'female';
   }
-  people.forEach(printFemales);
+  console.log(people.filter(isFemale));
 }
 console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
 {
-  function printIfHasCar(people){
-    if(people.hasCar === true) console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  function doesOwnCar(people){
+    return people.hasCar;
   }
-  people.forEach(printIfHasCar);
+  const hasCarArray = people.filter(doesOwnCar);
+  console.log(hasCarArray);
 }
 console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
 {
-  function printMarried(people){
-    if(people.married === true) console.log(`${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`);
+  function filterMarried(people){
+    return people.married;
   }
-  people.forEach(printMarried);
+  const marriedPeopleArray = people.filter(filterMarried);
+  console.log(marriedPeopleArray);
 }
 console.groupEnd();
 
 console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
 {
-  // ...sprendimas ir spausdinimas
+   function isMenOwnsCar(people){
+    return people.hasCar && people.sex === 'male';
+  } 
+
+  function isFemaleOwnsCar(people){
+    return people.hasCar && people.sex === 'female';
+  }
+
+  const menOwnsCar = people.filter(isMenOwnsCar);
+  const femaleOwnsCar = people.filter(isFemaleOwnsCar);
+
+  const peopleWithCars = {
+    men: menOwnsCar.length,
+    females: femaleOwnsCar.length
+  }
+
+  console.table(peopleWithCars);
+
 }
 console.groupEnd();
 
 console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
 {
-  // ...sprendimas ir spausdinimas
+   function reformPeoplePropertys(people){
+    return [{
+    name: people.name,
+    surname: people.surname,
+    sex: people.sex,
+    age: people.age,
+    salary: people.income,
+    married: people.married,
+    hasCar: people.hasCar
+    }]
+  }
+
+  const reformedPeopleArray = people.map(reformPeoplePropertys);
+  console.log(reformedPeopleArray);
+
 }
 console.groupEnd();
 
 console.groupCollapsed('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
 {
-  // ...sprendimas ir spausdinimas
+  function removeSexNameSurname(people){
+    return {
+    age: people.age,
+    salary: people.income,
+    married: people.married,
+    hasCar: people.hasCar
+    }
+  }
+
+  const removedSexNameSurnameObject = people.map(removeSexNameSurname);
+  console.log(removedSexNameSurnameObject);
 }
 console.groupEnd();
 
 console.groupCollapsed('13. Suformuokite žmonių masyvą  iš objektų, kuriuose "name" ir "surname" savybės, būtų pakeistos "fullname" savybe');
 {
-  // ...sprendimas ir spausdinimas
+  function combineNameSurname(people){
+    return {
+    fullName: `${people.name} ${people.surname}`,
+    sex: people.sex,
+    age: people.age,
+    salary: people.income,
+    married: people.married,
+    hasCar: people.hasCar
+  }
+  }
+
+  const combinedNameSurnameObject = people.map(combineNameSurname);
+  console.log(combinedNameSurnameObject);
 }
 console.groupEnd();
 
