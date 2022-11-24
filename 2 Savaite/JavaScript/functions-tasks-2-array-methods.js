@@ -1,242 +1,349 @@
-const people = [
-  {
-    name: 'Jonas',
-    surname: 'Jonaitis',
-    sex: 'male',
-    age: 26,
-    income: 1200,
-    married: false,
-    hasCar: false
-  },
-  {
-    name: 'Severija',
-    surname: 'Piktutytė',
-    sex: 'female',
-    age: 26,
-    income: 1300,
-    married: false,
-    hasCar: true
-  },
-  {
-    name: 'Valdas',
-    surname: 'Vilktorinas',
-    sex: 'male',
-    age: 16,
-    income: 0,
-    married: false,
-    hasCar: false
-  },
-  {
-    name: 'Virginijus',
-    surname: 'Uostauskas',
-    sex: 'male',
-    age: 32,
-    income: 2400,
-    married: true,
-    hasCar: true
-  },
-  {
-    name: 'Samanta',
-    surname: 'Uostauskienė',
-    sex: 'female',
-    age: 28,
-    income: 1200,
-    married: true,
-    hasCar: true
-  },
-  {
-    name: 'Janina',
-    surname: 'Stalautinskienė',
-    sex: 'female',
-    age: 72,
-    income: 364,
-    married: false,
-    hasCar: false
-  }
-];
-console.groupCollapsed('1. Atspausdinkite visus žmones eilutėmis');
-{
-  function printPeopleInfo(people){
-    const peopleString = `${people.name} ${people.surname} - ${people.sex}, age: ${people.age}, income ${people.income}$, is married: ${people.married}, has a car: ${people.hasCar}`;
-    console.log(peopleString);
-  }
-  people.forEach(printPeopleInfo);
-}
-console.groupEnd();
+// ----------------------Užduotys--------------------------
+const numbers = [1, 2.3, -2.9, 6.5, -5.2, 9, 1.02, 45, -69, 77, -12, 2, 8, -2, -4, 59, 7, -3];
 
-console.groupCollapsed('2. Atpausdinkite visus žmonių varus ir pavardes, atskirtus brūkšneliu');
+console.group('1. Padauginti masyvo narius iš 2 ir išsaugoti naujame masyve');
+console.log('---');
 {
-  function printNameSurname(people){
-    const nameSurnameString = `${people.name} - ${people.surname}`;
-    console.log(nameSurnameString);
-  }
-  people.forEach(printNameSurname);
-}
-console.groupEnd();
-
-console.groupCollapsed('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
-{
-  function printNameSurnameIsMarried(people){
-    const nameSurnameIsMarriedString = `${people.name} ${people.surname} is married: ${people.married}`;
-    console.log(nameSurnameIsMarriedString);
-  }
-  people.forEach(printNameSurnameIsMarried);
-}
-console.groupEnd();
-
-console.groupCollapsed('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
-{
-  function getSexSalary(people){
-    return {
-    sex : people.sex,
-    income: people.income
-  }
-  }
-  const sexSalaryArray = people.map(getSexSalary);
-  console.table(sexSalaryArray);
-
-}
-console.groupEnd();
-
-console.groupCollapsed('5. Sukurtite masyvą su vardais, pavardėmis ir lytimi, pagal pradinį žmonių masyvą');
-{
-  function getFullNameSex(people){
-    return {
-      name: people.name,
-      surname: people.surname,
-      sex: people.sex
+  function mulArrBy2(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      result.push(arr[i] * 2)
     }
+    return result;
   }
-  const fullNameSexArray = people.map(getFullNameSex);
-  console.log(fullNameSexArray);
+  console.log({
+    numbers,
+    result: mulArrBy2(numbers)
+  });
 }
+console.log('---');
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('6. Atspausdinkite visus vyrus');
+console.group('2. Pakelti masyvo narius kvadratu ir išsaugoti naujame masyve');
+console.log('---');
 {
-  function isMale(people){
-    return people.sex === 'male';
+  function powerArrBy2(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      result.push(arr[i] ** 2)
+    }
+    return result;
   }
-  console.log(people.filter(isMale))
+  console.log({
+    numbers,
+    result: powerArrBy2(numbers)
+  });
 }
+console.log('---');
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('7. Atspausdinkite visas moteris');
+console.group('3. Padauginti masyvo narius iš jų index\'o (vietos masyve) ir išsaugoti naujame masyve');
+console.log('---');
 {
-  function isFemale(people){
-    return people.sex === 'female';
+  function mulArrElementsByIndex(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      result[i] = arr[i] * i;
+    }
+    return result;
   }
-  console.log(people.filter(isFemale));
+  console.log({
+    numbers,
+    result: mulArrElementsByIndex(numbers)
+  });
 }
+console.log('---');
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
+console.group('4. Atrinkti tiktai teigimų elementų masyvą');
+console.log('---');
 {
-  function doesOwnCar(people){
-    return people.hasCar;
+  function filterPositives(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      arr[i] > 0 ? result.push(arr[i]) : 0 ;
+    }
+    return result;
   }
-  const hasCarArray = people.filter(doesOwnCar);
-  console.log(hasCarArray);
+   console.log({
+     numbers,
+     result: filterPositives(numbers)
+   });
 }
+console.log('---');
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
+console.group('5. Atrinkti tiktai neigiamų elementų masyvą');
+console.log('---');
 {
-  function filterMarried(people){
-    return people.married;
+  function filterNegatives(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      arr[i] < 0 ? result.push(arr[i]) : 0 ;
+    }
+    return result;
   }
-  const marriedPeopleArray = people.filter(filterMarried);
-  console.log(marriedPeopleArray);
+   console.log({
+     numbers,
+     result: filterNegatives(numbers)
+   });
 }
+console.log('---');
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
+console.group('6. Atrinkti tiktai lyginių skaičių masyvą');
+console.log('---');
 {
+  function filterEquals(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      element = arr[i];
+      if(element%2 === 0) result.push(element);
+    }
+    return result;
+  }
+   console.log({
+     numbers,
+     result: filterEquals(numbers)
+   });
+}
+console.log('---');
+console.groupEnd();
+console.log();
 
-  function assignDriverCountReducer(prevDriversBySex, person) {
-    if (person.hasCar) {
-      if (person.sex === 'male') prevDriversBySex.male += 1;
-      else prevDriversBySex.female += 1;
+console.group('7. Atrinkti tiktai nelyginių skaičių masyvą');
+console.log('---');
+{
+  function filterOdds(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      element = arr[i];
+      if(element%2 !== 0) result.push(element);
+    }
+    return result;
+  }
+   console.log({
+     numbers,
+     result: filterOdds(numbers)
+   });
+}
+console.log('---');
+console.groupEnd();
+console.log();
+
+console.group("8. Visas neigiamas vertes masyve padaryti teigiamomis ir išsaugoti į naują masyvą");
+{
+  function arrAbsoluteValues(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i += 1){
+      let element = arr[i];
+      if(element < 0) element *= -1;
+
+      result.push(element);
     }
 
-    return prevDriversBySex;
+    return result;
   }
 
-  const driversBySex = people.reduce(assignDriverCountReducer, { male: 0, female: 0 });
-  console.log(driversBySex);
-
-   /* function isMenOwnsCar(people){
-    return people.hasCar && people.sex === 'male';
-  } 
-
-  function isFemaleOwnsCar(people){
-    return people.hasCar && people.sex === 'female';
-  }
-
-  const menOwnsCar = people.filter(isMenOwnsCar);
-  const femaleOwnsCar = people.filter(isFemaleOwnsCar);
-
-  const peopleWithCars = {
-    men: menOwnsCar.length,
-    females: femaleOwnsCar.length
-  }
-
-  console.table(peopleWithCars); */
-
+  console.log('---');
+  console.log({
+    numbers,
+    result: arrAbsoluteValues(numbers)
+  });
+  console.log('---');
 }
 console.groupEnd();
+console.log();
 
-console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
+console.group('9. Pakelti visas masyvo reikšmes laipsniu \'index\' ir išsaugoti naujame masyve');
+console.log('---');
 {
-   function reformPeoplePropertys(people){
-    return [{
-    name: people.name,
-    surname: people.surname,
-    sex: people.sex,
-    age: people.age,
-    salary: people.income,
-    married: people.married,
-    hasCar: people.hasCar
-    }]
+  function powArrElementsByIndex(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      let element = arr[i] ** i;
+      result.push(element);
+    }
+    return result;
   }
-
-  const reformedPeopleArray = people.map(reformPeoplePropertys);
-  console.log(reformedPeopleArray);
-
+   console.log({
+     numbers,
+     result: powArrElementsByIndex(numbers)
+   });
 }
+console.log('---');
+console.groupEnd();
+console.log();
+
+console.group('10. Atrinkti tik natūralių skaičių masyvą');
+console.log('---');
+{
+  function filterNaturals(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 1){
+      arr[i] >= 0 && arr[i] % 1 === 0 ? result.push(arr[i]) : 0 ;
+    }
+    return result;
+  }
+   console.log({
+     numbers,
+     result: filterNaturals(numbers)
+   });
+}
+console.log('---');
+console.groupEnd();
+console.log();
+
+console.group('11. Suapvalinti visas masyvo reikšmes iki sveikų skaičių ir išsaugoti naujame masyve');
+console.log('---');
+{
+  function absArrElements(arr) {
+    let result = [];
+    for(let i = 0; i < arr.length; i += 1){
+    let remainder = arr[i] % 1;
+    let whole = arr[i] - remainder;
+    if(remainder <= -0.5) result.push(whole - 1);
+    else if(remainder >= 0.5) result.push(whole + 1) ;
+    else result.push(whole);
+    }
+    return result;
+    
+  }
+   console.log({
+     numbers,
+     result: absArrElements(numbers)
+   });
+}
+console.log('---');
+console.groupEnd()
+
+console.group('12. Atrinkti kas antrą elementą');
+console.log('---');
+{
+  function filterEverySecond(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 2){
+      result.push(arr[i]);
+    }
+    return result;
+  }
+   console.log({
+     numbers,
+     result: filterEverySecond(numbers)
+   });
+}
+console.log('---');
 console.groupEnd();
 
-console.groupCollapsed('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
+console.group('13. Atrinkti kas penktą elementą');
+console.log('---');
 {
-  function removeSexNameSurname(people){
-    return {
-    age: people.age,
-    salary: people.income,
-    married: people.married,
-    hasCar: people.hasCar
+  function filterEveryFifth(arr) {
+    const result = [];
+    for(let i = 0; i < arr.length; i += 5){
+      result.push(arr[i]);
+    }
+    return result;
+  }
+   console.log({
+     numbers,
+     result: filterEveryFifth(numbers)
+   });
+}
+console.log('---');
+console.groupEnd();
+
+
+console.group('14. Sukurti funkciją, kuri ima masyvą ir atspausdina kiekvieną jo reikšmę atskirai: [0] => 64. (nieko negrąžina)');
+console.log('---');
+{
+  function printArr(arr) {
+    for(let i = 0; i < arr.length; i += 1){
+      console.log(`[${i}] => ${arr[i]}`);
     }
   }
-
-  const removedSexNameSurnameObject = people.map(removeSexNameSurname);
-  console.log(removedSexNameSurnameObject);
+  printArr(numbers);
 }
+console.log('---');
 console.groupEnd();
 
-console.groupCollapsed('13. Suformuokite žmonių masyvą  iš objektų, kuriuose "name" ir "surname" savybės, būtų pakeistos "fullname" savybe');
+console.group('15. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų sumą');
+console.log('---');
 {
-  function combineNameSurname(people){
-    return {
-    fullName: `${people.name} ${people.surname}`,
-    sex: people.sex,
-    age: people.age,
-    salary: people.income,
-    married: people.married,
-    hasCar: people.hasCar
-  }
+  function sumArr(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i += 1){
+      sum += arr[i];
+    }
+    return sum;
   }
 
-  const combinedNameSurnameObject = people.map(combineNameSurname);
-  console.log(combinedNameSurnameObject);
+   console.log({
+     numbers,
+     result: sumArr(numbers)
+   });
 }
-console.groupEnd();
+console.log('---');
+console.groupEnd()
 
+console.group('16. Sukurti funkciją, kuri ima masyvą ir grąžina visų elementų vidurkį');
+console.log('---');
+{
+  function avgArr(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i += 1){
+      sum += arr[i];
+    }
+    return sum / arr.length;
+  }
+
+   console.log({
+     numbers,
+     result: avgArr(numbers)
+   });
+}
+console.log('---');
+console.groupEnd()
+
+console.group('17. Sukurti funkciją, kuri ima masyvą ir grąžina didžiausią skaičių masyve.');
+console.log('---');
+{
+  function arrMax(arr) {
+    let max = arr[0];
+    for(let i = 1; i < arr.length; i += 1){
+      arr[i] > max ? max = arr[i] : 0;
+    }
+    return max;
+  }
+
+   console.log({
+     numbers,
+     result: arrMax(numbers)
+   });
+}
+console.log('---');
+console.groupEnd()
+
+console.group('18. Sukurti funkciją, kuri ima masyvą ir grąžina mažiausią skaičių masyve.');
+console.log('---');
+{
+  function arrMin(arr) {
+    let min = arr[0];
+    for(let i = 1; i < arr.length; i += 1){
+      arr[i] < min ? min = arr[i] : 0;
+    }
+    return min;
+  }
+
+   console.log({
+     numbers,
+     result: arrMin(numbers)
+   });
+}
+console.log('---');
+console.groupEnd();
