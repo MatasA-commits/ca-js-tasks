@@ -38,16 +38,16 @@ console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmaj
 {
   // Funkcijos deklaravimas
   function printFirstLetter(str) {
-    // code ...
+    console.log(str.slice(0, 1))
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printFirstLetter("abcd");
-  // console.log("AAAA");
-  // printFirstLetter("AAAA");
-  // console.log("aBcD");
-  // printFirstLetter("aBcD");
-  // console.log('---');
+   console.log('---');
+   console.log("ABCD");
+   printFirstLetter("abcd");
+   console.log("AAAA");
+   printFirstLetter("AAAA");
+   console.log("aBcD");
+   printFirstLetter("aBcD");
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -56,13 +56,13 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
 {
   // Funkcijos deklaravimas
   function printLastLetter(str) {
-    // code ...
+    console.log(str.slice(-1))
   }
-  // console.log('---');
-  // printLastLetter('Labas');
-  // printLastLetter('Ate');
-  // printLastLetter('Brieda');
-  // console.log('---');
+   console.log('---');
+   printLastLetter('Labas');
+   printLastLetter('Ate');
+   printLastLetter('Brieda');
+   console.log('---');
 }
 console.groupEnd();
 console.log();
