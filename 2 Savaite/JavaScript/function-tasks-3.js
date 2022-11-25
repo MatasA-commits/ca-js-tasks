@@ -2,16 +2,16 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
 {
   // Funkcijos deklaravimas
   function printCapital(str) {
-    // code ...
+    console.log(str.toUpperCase());
   }
-  // console.log('---');
-  // console.log("abcd");
-  // printCapital("abcd");
-  // console.log("AAAA");
-  // printCapital("AAAA");
-  // console.log("aBcD");
-  // printCapital("aBcD");
-  // console.log('---');
+   console.log('---');
+   console.log("abcd");
+   printCapital("abcd");
+   console.log("AAAA");
+   printCapital("AAAA");
+   console.log("aBcD");
+   printCapital("aBcD");
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -20,16 +20,16 @@ console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raid
 {
   // Funkcijos deklaravimas
   function printLower(str) {
-    // code ...
+    console.log(str.toLowerCase())
   }
-  // console.log('---');
-  // console.log("ABCD");
-  // printLower("abcd");
-  // console.log("AAAA");
-  // printLower("AAAA");
-  // console.log("aBcD");
-  // printLower("aBcD");
-  // console.log('---');
+   console.log('---');
+   console.log("ABCD");
+   printLower("abcd");
+   console.log("AAAA");
+   printLower("AAAA");
+   console.log("aBcD");
+   printLower("aBcD");
+   console.log('---');
 }
 console.groupEnd();
 console.log();
