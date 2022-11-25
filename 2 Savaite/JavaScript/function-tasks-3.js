@@ -71,13 +71,20 @@ console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduri
 {
   // Funkcijos deklaravimas
   function printMiddleLetter(str) {
-    // code ...
+    if (str.length % 2 === 0){
+      let letter = str.length / 2;
+      console.log(str.slice(letter - 1, letter + 1))
+    } else {
+      let letter = (str.length / 2) - 0.5;
+      console.log(str[letter]);
+    }
+
   }
-  // console.log('---');
-  // printMiddleLetter('Labas');
-  // printMiddleLetter('Ate');
-  // printMiddleLetter('Brieda');
-  // console.log('---');
+   console.log('---');
+   printMiddleLetter('Labas');
+   printMiddleLetter('Ate');
+   printMiddleLetter('Brieda');
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -85,15 +92,15 @@ console.log();
 console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių");
 {
   function getDoubleLetterCount(str) {
-    // code ...
+    return str.length;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas': getDoubleLetterCount('labas'),
+     'kranas': getDoubleLetterCount('kranas'),
+     'kebabas': getDoubleLetterCount('kebabas'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
