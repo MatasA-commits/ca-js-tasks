@@ -299,16 +299,19 @@ console.log();
 
 console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
 {
+  
   function lastIndexOfLetterA(str) {
-    // code ...
+    const index = str.indexOf('a') + 1;
+    if (index > 0) return index;
+    else return 'Raides a nera';
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': lastIndexOfLetterA('labas'),
-  //   'kempės': lastIndexOfLetterA('kempės'),
-  //   '123123': lastIndexOfLetterA('123123'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas': lastIndexOfLetterA('labas'),
+     'kempės': lastIndexOfLetterA('kempės'),
+     '123123': lastIndexOfLetterA('123123'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -316,15 +319,17 @@ console.log();
 console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje");
 {
   function lastIndexOfLetter(str, searchLetter) {
-    // code ...
+    const index = str.indexOf(searchLetter) + 1;
+    if (index > 0) return index;
+    else return `Raides ${searchLetter} nera`;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': lastIndexOfLetter('labas', 'a'),
-  //   'kempės, k': lastIndexOfLetter('kempės', 'k'),
-  //   '123123, z': lastIndexOfLetter('123123', 'z'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas, a': lastIndexOfLetter('labas', 'a'),
+     'kempės, k': lastIndexOfLetter('kempės', 'k'),
+     '123123, z': lastIndexOfLetter('123123', 'z'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -332,15 +337,22 @@ console.log();
 console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais 'a' raidės pasikartojimais žodyje");
 {
   function indexesOfLetterA(str) {
-    // code ...
+    const arrayOfLetterAIndexes = [];
+    let indexOfA = -2;
+    do {
+      indexOfA = str.indexOf('a', indexOfA + 2);
+      if(indexOfA >= 0 ) arrayOfLetterAIndexes.push(indexOfA);
+      else break;
+    }while(true)
+    return arrayOfLetterAIndexes;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': indexesOfLetterA('labas'),
-  //   'kempės': indexesOfLetterA('kempės'),
-  //   '123123': indexesOfLetterA('123123'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas': indexesOfLetterA('labas'),
+     'kempės': indexesOfLetterA('kempės'),
+     '123123': indexesOfLetterA('123123'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -348,15 +360,22 @@ console.log();
 console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje");
 {
   function indexesOfLetter(str, searchLetter) {
-    // code ...
+    const arrayOfLetterIndexes = [];
+    let indexOfLetter = -2;
+    do {
+      indexOfLetter = str.indexOf(searchLetter, indexOfLetter + 2);
+      if(indexOfLetter >= 0 ) arrayOfLetterIndexes.push(indexOfLetter);
+      else break;
+    }while(true)
+    return arrayOfLetterIndexes;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': indexesOfLetter('labas', 'a'),
-  //   'kempės, m': indexesOfLetter('kempės', 'm'),
-  //   '123123, 2': indexesOfLetter('123123', '2'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas, a': indexesOfLetter('labas', 'a'),
+     'kempės, m': indexesOfLetter('kempės', 'm'),
+     '123123, 2': indexesOfLetter('123123', '2'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
