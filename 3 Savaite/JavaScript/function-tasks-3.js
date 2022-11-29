@@ -193,32 +193,44 @@ console.log();
 
 console.group("12. Sukurkite funkciją, kuri grąžina balsių kiekį žodyje");
 {
+  const vowels = ['A', 'a', 'Ą', 'a', 'E', 'e', 'Ę', 'ę', 'Ė', 'ė',  'I', 'i', 'Į', 'į', 'Y', 'y', 'O', 'o', 'U', 'u', 'Ų', 'ų', 'Ū', 'ū'];
+
   function getNumberOfVowels(str) {
-    // code ...
+    let count = 0;
+    for(let i = 0; i < str.length; i += 1){
+      if (vowels.includes(str[i])) count += 1;
+    }
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfVowels('aaaaa'),
-  //   'sasasasa': getNumberOfVowels('sasasasa'),
-  //   'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'aaaaa': getNumberOfVowels('aaaaa'),
+     'sasasasa': getNumberOfVowels('sasasasa'),
+     'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
 
 console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyje");
 {
+  const consonants = ['B', 'b', 'C', 'c', 'Č', 'č', 'D', 'd', 'F', 'f', 'G', 'g', 'H', 'h', 'J', 'j', 'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'P', 'p', 'R', 'r', 'S', 's', 'Š', 'š', 'T', 't', 'V', 'v', 'Z', 'z', 'Ž', 'ž'];
+
   function getNumberOfConsonants(str) {
-    // code ...
+    let count = 0;
+    for(let i = 0; i < str.length; i += 1){
+      if (consonants.includes(str[i])) count += 1;
+    }
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'aaaaa': getNumberOfConsonants('aaaaa'),
-  //   'sasasasa': getNumberOfConsonants('sasasasa'),
-  //   'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'aaaaa': getNumberOfConsonants('aaaaa'),
+     'sasasasa': getNumberOfConsonants('sasasasa'),
+     'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -226,7 +238,12 @@ console.log();
 console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaičių");
 {
   function isOnlyLetters(str) {
-    // ... code
+    let convertToNumber;
+    for(let i = 0; i < str.length; i += 1){
+      convertToNumber = Number(str[i]);
+      if(Boolean(convertToNumber) === true) return false;
+    }
+    return true;
   }
 
   console.log('---');
@@ -243,15 +260,19 @@ console.log();
 console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žodyje");
 {
   function letterACount(str) {
-    // code ...
+    let count = 0;
+    for(let i = 0; i < str.length; i += 1){
+      if(str[i].includes('a')) count += 1;
+    }
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': letterACount('labas'),
-  //   'kempės': letterACount('kempės'),
-  //   '123123': letterACount('123123'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas': letterACount('labas'),
+     'kempės': letterACount('kempės'),
+     '123123': letterACount('123123'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
@@ -259,15 +280,19 @@ console.log();
 console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį žodyje");
 {
   function letterCount(str, searchLetter) {
-    // code ...
+    let count = 0;
+    for(let i = 0; i < str.length; i += 1){
+      if(str[i].includes(searchLetter)) count += 1;
+    }
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': letterCount('labas', 'a'),
-  //   'kempės, k': letterCount('kempės', 'k'),
-  //   '123123, z': letterCount('123123', 'z'),
-  // })
-  // console.log('---');
+   console.log('---');
+   console.log({
+     'labas, a': letterCount('labas', 'a'),
+     'kempės, k': letterCount('kempės', 'k'),
+     '123123, z': letterCount('123123', 'z'),
+   })
+   console.log('---');
 }
 console.groupEnd();
 console.log();
