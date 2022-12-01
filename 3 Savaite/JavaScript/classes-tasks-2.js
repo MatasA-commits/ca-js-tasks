@@ -33,13 +33,60 @@ console.groupEnd();
 
 console.groupCollapsed('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
 {
-  // ... code
+  class Calculator {
+    add(a, b){
+      return a + b;
+    }
+
+    subtract(a, b){
+      return a - b;
+    }
+
+    multiply(a, b){
+      return a * b;
+    }
+
+    divide(a, b){
+      return a / b;
+    }
+
+  }
+
+  var calculator = new Calculator();
+
+  const added = calculator.add(10, 5);
+  console.log(added);
+
+  const subtracted = calculator.subtract(10, 5);
+  console.log(subtracted);
+
+  const multiplyed = calculator.multiply(10, 5);
+  console.log(multiplyed);
+
+  const divided = calculator.divide(10, 5);
+  console.log(divided);
+  
 }
 console.groupEnd();
 
 console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
 {
-  // ... code
+  class Employee {
+    constructor (firstname, lastname) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+      this.fullname = `${firstname} ${lastname}`;
+      this.email = `${firstname}.${lastname}@company.com`.toLowerCase();
+    }
+  }
+  emp1 = new Employee("John", "Smith");
+  console.log(emp1.fullname);
+
+  emp2 = new Employee("Mary",  "Sue");
+  console.log(emp2.email);
+
+  emp3 = new Employee("Antony", "Walker");
+  console.log(emp3.firstname);
 }
 console.groupEnd();
 
