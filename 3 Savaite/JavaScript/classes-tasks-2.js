@@ -182,7 +182,7 @@ console.groupCollapsed('6. - https://edabit.com/challenge/qNMtrtizgssAQqP2b');
 }
 console.groupEnd();
 
-console.group('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
+console.groupCollapsed('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
 {
   class IceCream {
     constructor(flavor, numSprinkles) {
@@ -193,7 +193,7 @@ console.group('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
 
   }
   function sweetestIcecream(arr) {
-   const sweetest = arr.reduce((max, { flavor, numSprinkles }) => {
+    const sweetest = arr.reduce((max, { flavor, numSprinkles }) => {
       if (flavor === 'Plain') numSprinkles += 0;
       else if (flavor === 'Vanilla' || flavor === 'ChocolateChip') {
         numSprinkles += 5;
@@ -221,18 +221,83 @@ console.groupEnd();
 
 console.groupCollapsed('8. - https://edabit.com/challenge/9zwdrfW99zmdRhibi');
 {
-  // ... code
+  class OnesThreesNines {
+    number;
+    #ones;
+    #threes;
+    #nines;
+    constructor(number) {
+      this.number = number;
+      this.#ones = number;
+      this.#threes = Math.floor(number / 3);
+      this.#nines = Math.floor(number / 9);
+    }
+
+    get ones() {
+      return this.#ones;
+    }
+    get threes() {
+      return this.#threes;
+    }
+    get nines() {
+      return this.#nines;
+    }
+
+  }
+  let n1 = new OnesThreesNines(10);
+  console.log(n1.nines);
+  console.log(n1.ones);
+  console.log(n1.threes);
 }
 console.groupEnd();
 
 console.groupCollapsed('9. - https://edabit.com/challenge/7PA4jhWqDYJT4ixLp');
 {
-  // ... code
+  class User {
+    static userCount = 0
+    username;
+
+    constructor(username) {
+      User.userCount += 1;
+      this.username = username;
+    }
+  }
+
+  u1 = new User("johnsmith10");
+  console.log(u1.username);
+  console.log(User.userCount);
+
+  u2 = new User("marysue1989");
+  console.log(u2.username);
+  console.log(User.userCount);
+
+  u3 = new User("milan_rodrick");
+  console.log(u3.username);
+  console.log(User.userCount);
 }
 console.groupEnd();
 
-console.groupCollapsed('10. - https://edabit.com/challenge/s5Sz2ovKsvtGxNGgn');
+console.group('10. - https://edabit.com/challenge/s5Sz2ovKsvtGxNGgn');
 {
-  // ... code
+  function Book(title, author) {
+    this.title = title;
+    this.author = author;
+    this.getTitle = function(){
+      return 'Title: ' + this.title;
+    }
+    this.getAuthor = function(){
+      return 'Author: ' + this.author;
+    }
+  }
+  
+
+  const PP = new Book('Pride and Prejudice', 'Jane Austen');
+  console.log(PP.author);
+  const H = new Book('Hamlet', 'William Shakespeare');
+  console.log(H.getAuthor());
+  const WP = new Book('War and Peace', 'Leo Tolstoy');
+  console.log(WP.getTitle());
+  
+  // Instantiate your Book constructor here
 }
 console.groupEnd();
