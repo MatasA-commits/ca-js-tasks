@@ -34,19 +34,19 @@ console.groupEnd();
 console.groupCollapsed('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
 {
   class Calculator {
-    add(a, b){
+    add(a, b) {
       return a + b;
     }
 
-    subtract(a, b){
+    subtract(a, b) {
       return a - b;
     }
 
-    multiply(a, b){
+    multiply(a, b) {
       return a * b;
     }
 
-    divide(a, b){
+    divide(a, b) {
       return a / b;
     }
 
@@ -65,14 +65,14 @@ console.groupCollapsed('2. - https://edabit.com/challenge/yxKoCKemzacK6PECM');
 
   const divided = calculator.divide(10, 5);
   console.log(divided);
-  
+
 }
 console.groupEnd();
 
 console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
 {
   class Employee {
-    constructor (firstname, lastname) {
+    constructor(firstname, lastname) {
       this.firstname = firstname;
       this.lastname = lastname;
       this.fullname = `${firstname} ${lastname}`;
@@ -82,7 +82,7 @@ console.groupCollapsed('3. - https://edabit.com/challenge/kGLhgwGaLJsCMS7wS');
   emp1 = new Employee("John", "Smith");
   console.log(emp1.fullname);
 
-  emp2 = new Employee("Mary",  "Sue");
+  emp2 = new Employee("Mary", "Sue");
   console.log(emp2.email);
 
   emp3 = new Employee("Antony", "Walker");
@@ -97,7 +97,7 @@ console.groupCollapsed('4. - https://edabit.com/challenge/iwdZiFucR5wkQsFHu');
       this.name = name;
       this.age = age;
     }
-  
+
     compareAge(other) {
       if (this.age < other.age) return `${other.name} is older than me.`;
       else if (this.age > other.age) return `${other.name} is younger than me.`;
@@ -124,47 +124,98 @@ console.groupCollapsed('5. - https://edabit.com/challenge/Hgb38yhWGwJCMHbRQ');
       this.sideA = sideA
       this.sideB = sideB
     }
-    getArea(){return this.sideA*this.sideB}
-    getPerimeter(){return (this.sideA + this.sideB) *2}
+    getArea() { return this.sideA * this.sideB }
+    getPerimeter() { return (this.sideA + this.sideB) * 2 }
   }
-  
-  
+
+
   class Circle {
-  static pi = 3.14159265359;
-    constructor(r){
+    static pi = 3.14159265359;
+    constructor(r) {
       this.r = r;
-      
+
     }
-    
-    getArea(){
+
+    getArea() {
       return Circle.pi * this.r ** 2;
     }
 
-    getPerimeter(){
+    getPerimeter() {
       return 2 * Circle.pi * this.r;
     }
 
   }
-  
-  
+
+
   // unquote and use run to test these cases:
-  
+
   let q = new Circle(4.44);
   console.log(q.getArea());
   console.log(q.getPerimeter());
-  
+
 }
 console.groupEnd();
 
 console.groupCollapsed('6. - https://edabit.com/challenge/qNMtrtizgssAQqP2b');
 {
-  // ... code
+  class Name {
+    fname;
+    lname;
+    fullname;
+    initials;
+    constructor(fname, lname,) {
+
+      this.fname = fname[0].toUpperCase() + fname.slice(1).toLowerCase();
+      this.lname = lname[0].toUpperCase() + lname.slice(1).toLowerCase();
+
+      this.fullname = `${this.fname} ${this.lname}`;
+      this.initials = `${this.fname[0]}.${this.lname[0]}`;
+
+    }
+
+  }
+  a1 = new Name("john", "SMITH");
+  console.log(a1.fname);
+  console.log(a1.lname);
+  console.log(a1.fullname);
+  console.log(a1.initials);
 }
 console.groupEnd();
 
-console.groupCollapsed('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
+console.group('7. - https://edabit.com/challenge/HKmJFmZZCX53ff4ke');
 {
-  // ... code
+  class IceCream {
+    constructor(flavor, numSprinkles) {
+      this.flavor = flavor
+      this.numSprinkles = numSprinkles
+    }
+
+
+  }
+  function sweetestIcecream(arr) {
+   const sweetest = arr.reduce((max, { flavor, numSprinkles }) => {
+      if (flavor === 'Plain') numSprinkles += 0;
+      else if (flavor === 'Vanilla' || flavor === 'ChocolateChip') {
+        numSprinkles += 5;
+      } else if (flavor === 'Strawberry' || flavor === 'Chocolate') {
+        numSprinkles += 10;
+      }
+      if (max < numSprinkles) max = numSprinkles;
+      return max;
+    }, 0)
+    return sweetest;
+  }
+
+  ice1 = new IceCream("Chocolate", 13)         // value of 23
+  ice2 = new IceCream("Vanilla", 0)           // value of 5
+  ice3 = new IceCream("Strawberry", 7)        // value of 17
+  ice4 = new IceCream("Plain", 18)             // value of 18
+  ice5 = new IceCream("ChocolateChip", 3)
+
+  const findSweetest = sweetestIcecream([ice1, ice2, ice3, ice4, ice5]);
+  console.log(findSweetest);
+  console.log(sweetestIcecream([ice3, ice1]));
+  console.log(sweetestIcecream([ice3, ice5]))
 }
 console.groupEnd();
 
