@@ -210,13 +210,15 @@ console.groupEnd();
 
 console.groupCollapsed('2. Atspausdinti visus Chemijos fakulteto studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const chemicsFacultyStudents = students.filter(student => student.faculty === "Chemijos fakultetas");
+  console.log(chemicsFacultyStudents);
 }
 console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const electronicsFacultyStudents = students.filter(student => student.faculty === "Elektros ir elektronikos fakultetas");
+  console.log(electronicsFacultyStudents);
 }
 console.groupEnd();
 
