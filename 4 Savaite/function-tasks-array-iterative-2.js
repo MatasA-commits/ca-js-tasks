@@ -3,7 +3,7 @@ const students = [
     name: 'Panatėja',
     surname: 'Sulindytė',
     faculty: 'Informatikos fakultetas',
-    course: 2,
+    course: 3,
     modules: [
       {
         title: 'Operacinės sistemos',
@@ -168,7 +168,7 @@ const students = [
     name: 'Grandinius',
     surname: 'Varžauskas',
     faculty: 'Elektros ir elektronikos fakultetas',
-    course: 1,
+    course: 4,
     modules: [
       {
         title: 'Matematika',
@@ -224,25 +224,31 @@ console.groupEnd();
 
 console.groupCollapsed('4. Atspausdinti tik pirmo kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const firstCourseStudents = students.filter(student => student.course === 1);
+  console.log(firstCourseStudents);
 }
 console.groupEnd();
 
 console.groupCollapsed('5. Atspausdinti tik antro kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  students.forEach(student => {
+    if(student.course === 2) console.log(student);
+  })
 }
 console.groupEnd();
 
 console.groupCollapsed('6. Atspausdinti tik trečio kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  const filterThirdFacultyStudents = students.filter(student => student.course === 3);
+  console.log(filterThirdFacultyStudents);
 }
 console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinti tik ketvirto kurso studentus');
 {
-  // ... sprendimas ir spausdinimas
+  students.forEach(student => {
+    if(student.course === 4) console.log(student);
+  })
 }
 console.groupEnd();
 
