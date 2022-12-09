@@ -1,4 +1,6 @@
-console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis");
+console.group(
+  "1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis raidėmis"
+);
 {
   // Funkcijos deklaravimas
   function printCapital(str) {
@@ -16,7 +18,9 @@ console.group("1. Sukurkite funkciją, kuri atspausdiną tekstą didžiosiomis r
 console.groupEnd();
 console.log();
 
-console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis");
+console.group(
+  "2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raidėmis"
+);
 {
   // Funkcijos deklaravimas
   function printLower(str) {
@@ -34,7 +38,9 @@ console.group("2. Sukurkite funkciją, kuri atspausdina tekstą mažosiomis raid
 console.groupEnd();
 console.log();
 
-console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmają raidę");
+console.group(
+  "3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmają raidę"
+);
 {
   // Funkcijos deklaravimas
   function printFirstLetter(str) {
@@ -52,7 +58,9 @@ console.group("3. Sukurkite funkciją, kuri atspausdina pirmojo parametro pirmaj
 console.groupEnd();
 console.log();
 
-console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskutinę raidę");
+console.group(
+  "4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskutinę raidę"
+);
 {
   // Funkcijos deklaravimas
   function printLastLetter(str) {
@@ -67,7 +75,9 @@ console.group("4. Sukurkite funkciją, kuri atspausdina pirmojo parametro paskut
 console.groupEnd();
 console.log();
 
-console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduriniają raidę");
+console.group(
+  "5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduriniają raidę"
+);
 {
   // Funkcijos deklaravimas
   function printMiddleLetter(str) {
@@ -82,7 +92,9 @@ console.group("5. Sukurkite funkciją, kuri atspausdina pirmojo parametro viduri
 console.groupEnd();
 console.log();
 
-console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių");
+console.group(
+  "6. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių"
+);
 {
   function getDoubleLetterCount(str) {
     // code ...
@@ -98,7 +110,9 @@ console.group("6. Sukurkite funkciją, kuri grąžina simbolių darinio raidži�
 console.groupEnd();
 console.log();
 
-console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių padaugintą iš dviejų");
+console.group(
+  "7. Sukurkite funkciją, kuri grąžina simbolių darinio raidžių skaičių padaugintą iš dviejų"
+);
 {
   function getDoubleLetterCount(str) {
     // code ...
@@ -114,7 +128,9 @@ console.group("7. Sukurkite funkciją, kuri grąžina simbolių darinio raidži�
 console.groupEnd();
 console.log();
 
-console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro bendrą simbolių skaičių");
+console.group(
+  "8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro bendrą simbolių skaičių"
+);
 {
   function getArgsLetterSum(a, b) {
     // code ...
@@ -130,7 +146,9 @@ console.group("8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro b
 console.groupEnd();
 console.log();
 
-console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>");
+console.group(
+  "9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>"
+);
 {
   function containsLetterA(str) {
     // code ...
@@ -146,7 +164,9 @@ console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 
 console.groupEnd();
 console.log();
 
-console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false");
+console.group(
+  "10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false"
+);
 {
   function containsLetter(str, letter) {
     // code ...
@@ -162,7 +182,9 @@ console.group("10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra
 console.groupEnd();
 console.log();
 
-console.group("11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra lyginis skaičius simbolių");
+console.group(
+  "11. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra lyginis skaičius simbolių"
+);
 {
   function isEvenNumberOfLetters(str) {
     // code ...
@@ -210,19 +232,21 @@ console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyj
 console.groupEnd();
 console.log();
 
-console.group("14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaitmenų");
+console.group(
+  "14. Sukurkite funkciją, kuri grąžina <true>, jeigu NĖRA skaitmenų"
+);
 {
   function isOnlyLetters(str) {
     // ... code
   }
 
-  console.log('---');
+  console.log("---");
   console.log({
-    'labas': isOnlyLetters('labas'),
-    'kempės': isOnlyLetters('kempės'),
-    '123123': isOnlyLetters('123123'),
-  })
-  console.log('---');
+    labas: isOnlyLetters("labas"),
+    kempės: isOnlyLetters("kempės"),
+    123123: isOnlyLetters("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -243,7 +267,9 @@ console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žod
 console.groupEnd();
 console.log();
 
-console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį žodyje");
+console.group(
+  "16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį žodyje"
+);
 {
   function letterCount(str, searchLetter) {
     // code ...
@@ -259,7 +285,9 @@ console.group("16. Sukurkite funkciją, kuri grąžina bet kokios raidės kiekį
 console.groupEnd();
 console.log();
 
-console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje");
+console.group(
+  "17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) 'a' raidės vietą žodyje"
+);
 {
   function indexOfLetterA(str) {
     // code ...
@@ -275,7 +303,9 @@ console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusė
 console.groupEnd();
 console.log();
 
-console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje");
+console.group(
+  "18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje"
+);
 {
   function indexOfLetter(str, searchLetter) {
     // code ...
@@ -291,7 +321,9 @@ console.group("18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusė
 console.groupEnd();
 console.log();
 
-console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais 'a' raidės pasikartojimais žodyje");
+console.group(
+  "19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais 'a' raidės pasikartojimais žodyje"
+);
 {
   function indexesOfLetterA(str) {
     // code ...
@@ -307,19 +339,20 @@ console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 console.groupEnd();
 console.log();
 
-console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje");
+console.group(
+  "20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje"
+);
 {
-
-  const letterEVariations = 'eęė';
+  const letterEVariations = "eęė";
 
   const additionalLTChecks = {
-    a: 'aą',
-    i: 'iį',
+    a: "aą",
+    i: "iį",
     e: letterEVariations,
     ę: letterEVariations,
     ė: letterEVariations,
-    u: 'uūų'
-  }
+    u: "uūų",
+  };
 
   function indexesOfLetter(str, searchLetter) {
     const search = additionalLTChecks[searchLetter] ?? searchLetter;
@@ -339,75 +372,89 @@ console.group("20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visai
 console.groupEnd();
 console.log();
 
-console.group("21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
+console.group(
+  "21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raidę žodyje ir grąžintų pakeistą žodį"
+);
 {
   function removeFirstLetterA(str) {
-    const indexOfA = str.indexOf('a');
-    if(indexOfA >= 0) return str.substring(0, indexOfA) + str.substring(indexOfA + 1, str.length);
+    const indexOfA = str.indexOf("a");
+    if (indexOfA >= 0)
+      return (
+        str.substring(0, indexOfA) + str.substring(indexOfA + 1, str.length)
+      );
     else return str;
   }
-   console.log('---');
-   console.log({
-     'labas': removeFirstLetterA('labas'),
-     'kempiniukas': removeFirstLetterA('kempiniukas'),
-     'programavimas': removeFirstLetterA('programavimas'),
-     'antradienis': removeFirstLetterA('antradienis'),
-     '123123': removeFirstLetterA('123123'),
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    labas: removeFirstLetterA("labas"),
+    kempiniukas: removeFirstLetterA("kempiniukas"),
+    programavimas: removeFirstLetterA("programavimas"),
+    antradienis: removeFirstLetterA("antradienis"),
+    123123: removeFirstLetterA("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
+console.group(
+  "22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį"
+);
 {
   function removeLastLetterA(str) {
-    const indexOfA = str.lastIndexOf('a');
-    if(indexOfA >= 0) return str.substring(0, indexOfA) + str.substring(indexOfA + 1, str.length);
+    const indexOfA = str.lastIndexOf("a");
+    if (indexOfA >= 0)
+      return (
+        str.substring(0, indexOfA) + str.substring(indexOfA + 1, str.length)
+      );
     else return str;
   }
-   console.log('---');
-   console.log({
-     'labas': removeLastLetterA('labas'),
-     'kempiniukas': removeLastLetterA('kempiniukas'),
-     'programavimas': removeLastLetterA('programavimas'),
-     'laba diena': removeLastLetterA('laba diena'),
-     'ant': removeLastLetterA('ant'),
-     '123123': removeLastLetterA('123123'),
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    labas: removeLastLetterA("labas"),
+    kempiniukas: removeLastLetterA("kempiniukas"),
+    programavimas: removeLastLetterA("programavimas"),
+    "laba diena": removeLastLetterA("laba diena"),
+    ant: removeLastLetterA("ant"),
+    123123: removeLastLetterA("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje");
+console.group(
+  "23. Sukurkite funkciją, kuri ištrintų visus 'a' raidės pasikartojimus žodyje"
+);
 {
   function removeAllOccurencesOfLetterA(str) {
-    return str.replaceAll('a', '');
+    return str.replaceAll("a", "");
   }
-   console.log('---');
-   console.log({
-     'labas': removeAllOccurencesOfLetterA('labas'),
-     'kempiniukas': removeAllOccurencesOfLetterA('kempiniukas'),
-     '123123': removeAllOccurencesOfLetterA('123123'),
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    labas: removeAllOccurencesOfLetterA("labas"),
+    kempiniukas: removeAllOccurencesOfLetterA("kempiniukas"),
+    123123: removeAllOccurencesOfLetterA("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("24. Sukurkite funkciją, kuri ištrintų visus, vartotojo įvestos raidės pasikartojimus žodyje");
+console.group(
+  "24. Sukurkite funkciją, kuri ištrintų visus, vartotojo įvestos raidės pasikartojimus žodyje"
+);
 {
   function removeAllOccurencesOfLetter(str, letter) {
-    return str.replaceAll(letter, '');
+    return str.replaceAll(letter, "");
   }
-   console.log('---');
-   console.log({
-     'labas, a': removeAllOccurencesOfLetter('labas', 'a'),
-     'kempiniukas, i': removeAllOccurencesOfLetter('kempiniukas', 'i'),
-     '123123, 3': removeAllOccurencesOfLetter('123123', '3'),
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    "labas, a": removeAllOccurencesOfLetter("labas", "a"),
+    "kempiniukas, i": removeAllOccurencesOfLetter("kempiniukas", "i"),
+    "123123, 3": removeAllOccurencesOfLetter("123123", "3"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -415,67 +462,74 @@ console.log();
 // 25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.
 //  Ši funkcija turi žodyje ištrinti visas raides, kurios perduotos antruoju parametru.
 //  Atlikus veiksmus, grąžinti pakeistą žodį
-console.group("25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis.");
+console.group(
+  "25. Sukurkite funkciją, kuri pirmu parametru priimtų žodį, o antruoju - masyvą su raidėmis."
+);
 {
   function filterLetters(str, lettersToRemove) {
     let newString = str;
-    for(let i = 0; i < lettersToRemove.length; i += 1){
-      newString = newString.replaceAll(lettersToRemove[i], '');
+    for (let i = 0; i < lettersToRemove.length; i += 1) {
+      newString = newString.replaceAll(lettersToRemove[i], "");
     }
-   return newString;
+    return newString;
   }
-   console.log('---');
-   const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
-   console.log(str);
-   console.log('---');
+  console.log("---");
+  const str = filterLetters("Brangakmienio paveikslas", ["a", "i"]);
+  console.log(str);
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį");
+console.group(
+  "26. Sukurkite funkciją, kuri pirmu parametrų priimą sakinį, kiekvieną tarpą pakeičia brūkšneliu ir grąžina pakeistą sakinį"
+);
 {
   function replaceSpaceWithDash(str) {
-    return str.replaceAll(' ', '-');
+    return str.replaceAll(" ", "-");
   }
-   console.log('---');
-   console.log({
-     'viens du trys': replaceSpaceWithDash('viens du trys'),
-     'as tave myliu': replaceSpaceWithDash('as tave myliu'),
-     'Bairis seniuk': replaceSpaceWithDash('Bairis seniuk'),
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    "viens du trys": replaceSpaceWithDash("viens du trys"),
+    "as tave myliu": replaceSpaceWithDash("as tave myliu"),
+    "Bairis seniuk": replaceSpaceWithDash("Bairis seniuk"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja");
+console.group(
+  "27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja"
+);
 {
   function capitalize(str) {
-    const arrayFromString = str.split(' ');
-    let capitalizedString = '';
-    for(i = 0; i < arrayFromString.length; i += 1){
+    const arrayFromString = str.split(" ");
+    let capitalizedString = "";
+    for (let i = 0; i < arrayFromString.length; i += 1) {
       const word = arrayFromString[i];
-      const remainingWord = word.slice(1, word.length);
-      const capitalizedWord = word[0].toUpperCase() + remainingWord;
-
-      i !== arrayFromString.length - 1 ? capitalizedString += capitalizedWord + ' ' : capitalizedString += capitalizedWord;
+      const capitalizedWord = word.replace(word[0], word[0].toUpperCase());
+      i !== arrayFromString.length - 1
+        ? (capitalizedString += capitalizedWord + " ")
+        : (capitalizedString += capitalizedWord);
     }
     return capitalizedString;
-
   }
-   console.log('---');
-   console.log({
-     'viens du trys': capitalize('viens du trys'),
-     'as tave myliu': capitalize('as tave myliu'),
-     'Bairis seniuk': capitalize('Bairis seniuk'),
-     'buciau patikejes': capitalize('buciau patikejes')
-   })
-   console.log('---');
+  console.log("---");
+  console.log({
+    "viens du trys": capitalize("viens du trys"),
+    "as tave myliu": capitalize("as tave myliu"),
+    "Bairis seniuk": capitalize("Bairis seniuk"),
+    "buciau patikejes": capitalize("buciau patikejes"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
 
-console.group("28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'abc' -> 'cba'");
+console.group(
+  "28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'abc' -> 'cba'"
+);
 {
   function strReverse(str) {
     // code ...
@@ -489,13 +543,14 @@ console.group("28. Sukurkite funkciją, kuri atspausdina žodį atvirkščiai 'a
 console.groupEnd();
 console.log();
 
-
 // 29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)
 //  mama -> false
 //  mamam -> true
 //  123321 -> true
 //  123456 -> false
-console.group("29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)");
+console.group(
+  "29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)"
+);
 {
   function isPalyndrome(str) {
     let i = 0;
@@ -526,7 +581,6 @@ console.log();
 //    mėgstu pieną , bet medų nelabai.labanakt. -> Mėgstu pieną, bet medų nelabai. Labanakt.
 console.group("30. Sukurkite funkciją, kuri taiso pastraipos klaidas");
 {
-
   function capitalizeFirstLetter(str) {
     // code ...
   }
@@ -573,7 +627,9 @@ console.log();
 
 // 31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą:
 //  labas, aš esu grybas -> ['labas', 'aš', 'esu', 'grybas']
-console.group("31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą");
+console.group(
+  "31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą"
+);
 {
   function splitSentence(sentence) {
     // code ...
@@ -588,12 +644,13 @@ console.group("31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir s
 console.groupEnd();
 console.log();
 
-
 // 32. Sukurkite funkciją, kuri pirmu parametru priimą <string>'ą, o antruoju skiriklį
 //  Ši funkcija turi grąžinti masyvą sudarytą iš atskirtų dalių:
-//  explode('Man patinka sniegas', ' ');  -> ['man', 'patinka', 'sniegas'];  
-//  explode('home/about/13', '/');        -> ['home', 'about', '13'];  
-console.group("32. Sukurkite funkciją, kuri pirmu parametru priimą <string>'ą, o antruoju skiriklį");
+//  explode('Man patinka sniegas', ' ');  -> ['man', 'patinka', 'sniegas'];
+//  explode('home/about/13', '/');        -> ['home', 'about', '13'];
+console.group(
+  "32. Sukurkite funkciją, kuri pirmu parametru priimą <string>'ą, o antruoju skiriklį"
+);
 {
   function explode(str, separator) {
     // code ...
