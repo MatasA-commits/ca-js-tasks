@@ -266,7 +266,7 @@ console.groupCollapsed("7. Atspausdinti tik ketvirto kurso studentus");
 }
 console.groupEnd();
 
-console.group(
+console.groupCollapsed(
   "8. Iš students masyvo atrinkti ir atspausdinti visų studentų vidurkius"
 );
 {
@@ -320,7 +320,27 @@ console.groupCollapsed(
   "9. Atspausdinti visų Informatikos fakulteto studentų vidurkius"
 );
 {
-  // ... sprendimas ir spausdinimas
+  const informaticFacultyStudents = students.filter(
+    (student) => student.faculty === "Informatikos fakultetas"
+  );
+  informaticFacultyStudents.forEach((student) => {
+    let creditSum = 0;
+    const studentMarks = student.modules.reduce(
+      (marksAvg, { credits, marks }) => {
+        creditSum += credits;
+        const markSum = marks.reduce((markSum, marks) => (markSum += marks), 0);
+        const markAvg = markSum / marks.length;
+        return (marksAvg += markAvg * credits);
+      },
+      0
+    );
+    const studentMarkAvg = studentMarks / creditSum;
+    console.log(
+      `${student.name} ${student.surname} vidurkis: ${studentMarkAvg.toFixed(
+        2
+      )}`
+    );
+  });
 }
 console.groupEnd();
 
@@ -328,7 +348,27 @@ console.groupCollapsed(
   "10. Atspausdinti visų Chemijos fakulteto studentų vidurkius"
 );
 {
-  // ... sprendimas ir spausdinimas
+  const chemicsFacultyStudents = students.filter(
+    (student) => student.faculty === "Chemijos fakultetas"
+  );
+  chemicsFacultyStudents.forEach((student) => {
+    let creditSum = 0;
+    const studentMarks = student.modules.reduce(
+      (marksAvg, { credits, marks }) => {
+        creditSum += credits;
+        const markSum = marks.reduce((markSum, marks) => (markSum += marks), 0);
+        const markAvg = markSum / marks.length;
+        return (marksAvg += markAvg * credits);
+      },
+      0
+    );
+    const studentMarkAvg = studentMarks / creditSum;
+    console.log(
+      `${student.name} ${student.surname} vidurkis: ${studentMarkAvg.toFixed(
+        2
+      )}`
+    );
+  });
 }
 console.groupEnd();
 
@@ -336,6 +376,26 @@ console.groupCollapsed(
   "11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius"
 );
 {
-  // ... sprendimas ir spausdinimas
+  const electronicsFacultyStudents = students.filter(
+    (student) => student.faculty === "Elektros ir elektronikos fakultetas"
+  );
+  electronicsFacultyStudents.forEach((student) => {
+    let creditSum = 0;
+    const studentMarks = student.modules.reduce(
+      (marksAvg, { credits, marks }) => {
+        creditSum += credits;
+        const markSum = marks.reduce((markSum, marks) => (markSum += marks), 0);
+        const markAvg = markSum / marks.length;
+        return (marksAvg += markAvg * credits);
+      },
+      0
+    );
+    const studentMarkAvg = studentMarks / creditSum;
+    console.log(
+      `${student.name} ${student.surname} vidurkis: ${studentMarkAvg.toFixed(
+        2
+      )}`
+    );
+  });
 }
 console.groupEnd();
