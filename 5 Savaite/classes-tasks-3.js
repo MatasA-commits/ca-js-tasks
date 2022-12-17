@@ -62,8 +62,74 @@ console.groupCollapsed("https://edabit.com/challenge/2FF7RKw9RLwc3EBY9");
 }
 console.groupEnd();
 
-console.groupCollapsed("https://edabit.com/challenge/ifDM26p25bqS8EsFu");
+console.group("https://edabit.com/challenge/ifDM26p25bqS8EsFu");
 {
-  // ... code
+  class Player{
+    #hp;
+    #maxHp;
+    #en;
+    #maxEn;
+    armor;
+    name;
+    constructor(name, hp, en, armor){
+      this.hp = hp;
+      this.maxHp = hp;
+      this.en = en;
+      this.maxEn = en;
+      this.armor = armor;
+      this.name = name;
+    }
+
+    set hp(val){
+      if(val < 0 || val > this.#maxHp){
+        console.error('Players hp incorrect');
+        return;
+      }
+      this.#hp = val;
+    }
+
+    get hp(){
+      return this.#hp;
+    }
+    set en(val){
+      if(val < 0 || val > this.maxEn){
+        console.error('Players en incorrect');
+        return;
+      }
+      this.#en = val;
+    }
+
+    get en(){
+      return this.#en;
+    }
+
+    set maxHp(val){
+      this.#maxHp = val;
+    }
+
+    get maxHp(){
+      return this.#maxHp;
+    }
+
+    set maxEn(val){
+      this.#maxEn = val;
+    }
+
+    get maxEn(){
+      return this.#maxEn
+    }
+
+    get hpPerc(){
+      const hpPercentage = ((this.hp / this.maxHp) * 100).toFixed(2);
+      return Number(hpPercentage);
+    }
+  }
+
+  const alice = new Player("Alice", 110, 50, 10);
+  const bob = new Player("Bob", 100, 60, 20);
+
+  console.log(bob);
+  console.log(alice.en);
+
 }
 console.groupEnd();
