@@ -64,14 +64,14 @@ console.groupEnd();
 
 console.group("https://edabit.com/challenge/ifDM26p25bqS8EsFu");
 {
-  class Player{
+  class Player {
     #hp;
     #maxHp;
     #en;
     #maxEn;
     armor;
     name;
-    constructor(name, hp, en, armor){
+    constructor(name, hp, en, armor) {
       this.hp = hp;
       this.maxHp = hp;
       this.en = en;
@@ -80,56 +80,101 @@ console.group("https://edabit.com/challenge/ifDM26p25bqS8EsFu");
       this.name = name;
     }
 
-    set hp(val){
-      if(val < 0 || val > this.#maxHp){
-        console.error('Players hp incorrect');
+    set hp(val) {
+      if (val < 0 || val > this.#maxHp) {
+        console.error("Players hp incorrect");
         return;
       }
       this.#hp = val;
     }
 
-    get hp(){
+    get hp() {
       return this.#hp;
     }
-    set en(val){
-      if(val < 0 || val > this.maxEn){
-        console.error('Players en incorrect');
+    set en(val) {
+      if (val < 0 || val > this.maxEn) {
+        console.error("Players en incorrect");
         return;
       }
       this.#en = val;
     }
 
-    get en(){
+    get en() {
       return this.#en;
     }
 
-    set maxHp(val){
+    set maxHp(val) {
       this.#maxHp = val;
     }
 
-    get maxHp(){
+    get maxHp() {
       return this.#maxHp;
     }
 
-    set maxEn(val){
+    set maxEn(val) {
       this.#maxEn = val;
     }
 
-    get maxEn(){
-      return this.#maxEn
+    get maxEn() {
+      return this.#maxEn;
     }
 
-    get hpPerc(){
+    get hpPerc() {
       const hpPercentage = ((this.hp / this.maxHp) * 100).toFixed(2);
       return Number(hpPercentage);
+    }
+
+    learnSkill(skillName, stats) {
+      this[skillName] = (enemy) => {
+        if (stats.cost > this.en) {
+          return (
+            `${this.name} attempted to use ${skillName}, ` +
+            `but didn't have enough energy!`
+          );
+        }
+        
+        this.en = this.en - stats.cost;
+        const effArmor = enemy.armor - stats.penetration;
+        const damage = stats.damage * ((100 - effArmor) / 100);
+        enemy.hp = enemy.hp - damage;
+        if (!stats.heal) this.hp = Math.min(100, this.hp + stats.heal);
+
+        return (
+          `${this.name} used ${skillName}, ${stats.desc}, against ` +
+          `${enemy.name}, doing ${Number(damage.toFixed(2))} damage! ` +
+          (!stats.heal ? `${this.name} healed for ${stats.heal} health!` : "") +
+          (enemy.hp <= 0
+            ? ` ${enemy.name} died. `
+            : ` ${enemy.name} is at ${enemy.hpPerc}% health.`)
+        );
+      };
     }
   }
 
   const alice = new Player("Alice", 110, 50, 10);
   const bob = new Player("Bob", 100, 60, 20);
 
-  console.log(bob);
-  console.log(alice.en);
+  alice.learnSkill("fireball", {
+    damage: 23,
+    penetration: 1.2,
+    heal: 5,
+    cost: 15,
+    desc: "a firey magical attack",
+  });
 
+  console.log(alice.fireball(bob));
+  // Alice used fireball, a firey magical attack, against Bob, doing
+  // 18.68 damage! Alice healed for 5 health! Bob is at 81.32% health.
+
+  bob.learnSkill("superbeam", {
+    damage: 200,
+    penetration: 50,
+    heal: 50,
+    cost: 75,
+    desc: "an overpowered attack, pls nerf",
+  });
+
+  console.log(bob.superbeam(alice));
+  // Bob attempted to use superbeam, but didn't have enough energy!
 }
 console.groupEnd();
